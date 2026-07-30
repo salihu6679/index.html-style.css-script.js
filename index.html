@@ -3,83 +3,82 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DM².K.A.R.S COMM CENTER</title>
+<title>DM²K.A.R.S COMM CENTER</title>
 
-<style>
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#0d1117;
-    color:white;
-    text-align:center;
-}
-header{
-    background:#00a859;
-    padding:20px;
-}
-h1{
-    margin:0;
-}
-.container{
-    padding:20px;
-}
-.card{
-    background:#161b22;
-    margin:15px auto;
-    padding:20px;
-    border-radius:10px;
-    max-width:400px;
-}
-button{
-    background:#00a859;
-    color:white;
-    border:none;
-    padding:12px 20px;
-    border-radius:6px;
-    cursor:pointer;
-    font-size:16px;
-}
-button:hover{
-    background:#008f4d;
-}
-footer{
-    margin-top:30px;
-    padding:15px;
-    background:#161b22;
-}
-</style>
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 </head>
 
 <body>
 
-<header>
-<h1>DM².K.A.R.S COMM CENTER</h1>
-<p>Data • Airtime • VTU Services</p>
+<header class="header">
+    <h2>DM²K.A.R.S COMM CENTER</h2>
+    <p>Fast • Secure • Reliable</p>
 </header>
 
-<div class="container">
+<div class="wallet-card">
+    <h3>Wallet Balance</h3>
+    <h1 id="balance">₦0.00</h1>
+
+    <button class="btn">
+        <i class="fa-solid fa-wallet"></i>
+        Fund Wallet
+    </button>
+</div>
+
+<h3 class="section-title">Quick Services</h3>
+
+<div class="grid">
 
 <div class="card">
-<h2>Welcome</h2>
-<p>Buy Cheap Data & Airtime Instantly.</p>
-<button onclick="alert('Welcome to DM².K.A.R.S COMM CENTER!')">
-Get Started
-</button>
+<i class="fa-solid fa-wifi"></i>
+<p>Buy Data</p>
 </div>
 
 <div class="card">
-<h3>Available Networks</h3>
-<p>MTN</p>
-<p>Airtel</p>
-<p>Glo</p>
-<p>9mobile</p>
+<i class="fa-solid fa-phone"></i>
+<p>Airtime</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-bolt"></i>
+<p>Electricity</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-tv"></i>
+<p>Cable TV</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-graduation-cap"></i>
+<p>Exam PIN</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-clock-rotate-left"></i>
+<p>History</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-user"></i>
+<p>Profile</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-headset"></i>
+<p>Support</p>
 </div>
 
 </div>
 
-<footer>
-© 2026 DM².K.A.R.S COMM CENTER
-</footer>
+<script src="script.js"></script>
 
 </body>
 </html>
