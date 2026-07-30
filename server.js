@@ -10,11 +10,12 @@ app.use(express.json());
 
 const TOKEN = process.env.TOKEN;
 
+const path = require("path");
+
+app.use(express.static(path.join(__dirname, "public")));
+
 app.get("/", (req, res) => {
-  res.json({
-    status: "success",
-    message: "DM²K.A.R.S COMM CENTER Backend is running"
-  });
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 app.get("/check-token", (req, res) => {
