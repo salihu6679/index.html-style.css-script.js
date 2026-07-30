@@ -1,0 +1,87 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f3f7fb;
+padding:20px;
+}
+
+.header{
+background:#0d47a1;
+color:white;
+padding:25px;
+border-radius:18px;
+text-align:center;
+margin-bottom:20px;
+box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+.header p{
+margin-top:5px;
+font-size:14px;
+opacity:.9;
+}
+
+.wallet-card{
+background:linear-gradient(135deg,#1565c0,#42a5f5);
+color:white;
+padding:20px;
+border-radius:20px;
+margin-bottom:25px;
+box-shadow:0 8px 18px rgba(0,0,0,.15);
+}
+
+.wallet-card h1{
+font-size:32px;
+margin:12px 0;
+}
+
+.btn{
+background:#fff;
+color:#1565c0;
+border:none;
+padding:12px 18px;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.section-title{
+margin:20px 0 15px;
+color:#0d47a1;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+.card{
+background:#fff;
+padding:22px;
+border-radius:16px;
+text-align:center;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card i{
+font-size:32px;
+color:#1565c0;
+margin-bottom:10px;
+}
+
+.card p{
+font-weight:600;
+font-size:15px;
+color:#333;
+}
