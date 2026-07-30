@@ -1,0 +1,110 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7fc;
+padding:20px;
+}
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#1565C0;
+color:white;
+padding:20px;
+border-radius:20px;
+margin-bottom:20px;
+box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+.header h2{
+font-size:24px;
+font-weight:700;
+}
+
+.header p{
+font-size:13px;
+opacity:.9;
+}
+
+.profile{
+width:50px;
+height:50px;
+border-radius:50%;
+background:white;
+color:#1565C0;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:22px;
+}
+
+.wallet{
+background:linear-gradient(135deg,#1976D2,#42A5F5);
+padding:25px;
+border-radius:20px;
+color:white;
+margin-bottom:25px;
+box-shadow:0 10px 20px rgba(0,0,0,.12);
+}
+
+.wallet p{
+font-size:14px;
+}
+
+.wallet h1{
+font-size:35px;
+margin:10px 0;
+}
+
+.wallet button{
+border:none;
+background:white;
+color:#1565C0;
+padding:12px 20px;
+border-radius:12px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.title{
+margin-bottom:15px;
+color:#1565C0;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card i{
+font-size:32px;
+color:#1565C0;
+margin-bottom:10px;
+}
+
+.card span{
+display:block;
+font-weight:600;
+font-size:15px;
+color:#333;
+}
