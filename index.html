@@ -7,76 +7,113 @@
 
 <link rel="stylesheet" href="style.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 
 <body>
 
-<header class="header">
-    <h2>DM²K.A.R.S COMM CENTER</h2>
-    <p>Fast • Secure • Reliable</p>
+<header class="topbar">
+
+<h2>DM²K.A.R.S</h2>
+
+<i class="fa-solid fa-bell"></i>
+
 </header>
 
-<div class="wallet-card">
-    <h3>Wallet Balance</h3>
-    <h1 id="balance">₦0.00</h1>
+<section class="wallet">
 
-    <button class="btn">
-        <i class="fa-solid fa-wallet"></i>
-        Fund Wallet
-    </button>
+<p>Wallet Balance</p>
+
+<h1 id="balance">₦0.00</h1>
+
+<div class="btns">
+
+<button id="refreshBtn">
+<i class="fa-solid fa-rotate"></i>
+Refresh
+</button>
+
+<button>
+<i class="fa-solid fa-wallet"></i>
+Fund Wallet
+</button>
+
 </div>
 
-<h3 class="section-title">Quick Services</h3>
+</section>
+
+<h3 class="title">Our Services</h3>
 
 <div class="grid">
 
 <div class="card">
 <i class="fa-solid fa-wifi"></i>
-<p>Buy Data</p>
+<span>Buy Data</span>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-phone"></i>
-<p>Airtime</p>
+<span>Airtime</span>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-bolt"></i>
-<p>Electricity</p>
+<span>Electricity</span>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-tv"></i>
-<p>Cable TV</p>
+<span>Cable TV</span>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-graduation-cap"></i>
-<p>Exam PIN</p>
+<span>Exam PIN</span>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-clock-rotate-left"></i>
-<p>History</p>
+<span>History</span>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-user"></i>
-<p>Profile</p>
+<span>Profile</span>
 </div>
 
 <div class="card">
-<i class="fa-solid fa-headset"></i>
-<p>Support</p>
+<i class="fa-solid fa-gear"></i>
+<span>Settings</span>
 </div>
 
 </div>
+
+<nav class="bottom">
+
+<a class="active">
+<i class="fa-solid fa-house"></i>
+<p>Home</p>
+</a>
+
+<a>
+<i class="fa-solid fa-wallet"></i>
+<p>Wallet</p>
+</a>
+
+<a>
+<i class="fa-solid fa-clock"></i>
+<p>History</p>
+</a>
+
+<a>
+<i class="fa-solid fa-user"></i>
+<p>Profile</p>
+</a>
+
+</nav>
 
 <script src="script.js"></script>
 
