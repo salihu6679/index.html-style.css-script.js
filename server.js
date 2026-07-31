@@ -1,53 +1,27 @@
-const express = require("express");
-const cors = require("cors");
-const axios = require("axios");
-const path = require("path");
-require("dotenv").config();
+const API = "https://YOUR-BACKEND-URL.onrender.com";
 
-const app = express();
+async function loadBalance() {
+  const balance = document.getElementById("balance");
 
-app.use(cors());
-app.use(express.json());
+  balance.innerText = "Loading...";
 
-// Serve frontend files
-app.use(express.static(path.join(__dirname, "public")));
-
-const TOKEN = process.env.TOKEN;
-
-// Home Page
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
-});
-
-// Check Token
-app.get("/check-token", (req, res) => {
-  res.json({
-    token: TOKEN || "TOKEN NOT FOUND"
-  });
-});
-
-// Wallet Balance
-app.get("/balance", async (req, res) => {
   try {
-    const response = await axios.get("https://rahimdata.com/api/user/", {
-      headers: {
-        Authorization: `Token ${TOKEN}`,
-        "Content-Type": "application/json"
-      }
-    });
+    const res = await fetch(`${API}/balance`);
+    const data = await res.json();
 
-    res.json(response.data);
-
-  } catch (error) {
-    res.status(500).json({
-      error: "Unable to fetch wallet balance",
-      details: error.response?.data || error.message
-    });
+    if (data.balance !== undefined) {
+      balance.innerText = "₦" + data.balance;
+    } else if (data.wallet_balance !== undefined) {
+      balance.innerText = "₦" + data.wallet_balance;
+    } else {
+      balance.innerText = "₦0.00";
+    }
+  } catch (err) {
+    balance.innerText = "Error";
+    console.log(err);
   }
-});
+}
 
-const PORT = process.env.PORT || 3000;
+document.getElementById("refreshBtn").addEventListener("click", loadBalance);
 
-app.listen(PORT, () => {
-  console.log(`DM²K.A.R.S COMM CENTER running on port ${PORT}`);
-});
+window.onload = loadBalance;
